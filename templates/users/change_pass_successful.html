@@ -1,0 +1,6 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <h3>Password change successful</h3>
+    <p>Your password was changed.</p>
+    <a href="{% url 'account details' pk=request.user.pk %}">Profile Details</a>
+{% endblock %}

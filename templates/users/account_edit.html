@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/user_css/edit_acc.css' %}">
+    <section class="edit-acc">
+        <h1>Edit Profile</h1>
+        <form method="post" action="{% url 'account edit' pk=object.pk %}">
+            {{ form.as_div }}
+            {% csrf_token %}
+            <button>Edit</button>
+        </form>
+    </section>
+{% endblock %}

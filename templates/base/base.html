@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="wesite icon" id="logo" type="jpg" href="{% static 'images/cable_logo.jpg' %}">
+    <title>Cable App</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a class="header_a" href="{% url 'home page' %}">Cable App</a>
+
+        <ul role="list">
+            <li><a href="{% url 'home page' %}" class="split">Cables</a></li>
+            <li class="last_li"><a href="#" class="split">Orders</a></li>
+        </ul>
+
+        <ul role="list">
+            {% if request.user.is_authenticated %}
+                <li><a href="{% url 'account details' pk=request.user.pk %}" class="split">{{ user.username }}</a></li>
+                <li class="last_li"><a href="{% url 'account logout' %}" class="split">Sign Out</a></li>
+
+            {% else %}
+                <li><a href="{% url 'account login' %}" class="split">Sign In</a></li>
+                <li class="last_li"><a href="{% url 'account register' %}" class="split">Register</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+<main>
+    {% block page_content %}
+    {% endblock %}
+</main>
+</body>
+</html>

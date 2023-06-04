@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    {% load static %}
+    <section>
+        <h1>Details: <strong>{{ object.name }}</strong></h1>
+        <p>Cap: <a href="{% url 'cap details' pk=cable.cap.pk %}"><strong>{{ object.cap.name }}</strong></a></p>
+        <p>Clutch: <a href="{% url 'clutch details' pk=cable.clutch.pk %}"><strong>{{ object.clutch.name }}</strong></a></p>
+        <p>Inductor: <a href="{% url 'inductor details' pk=cable.inductor.pk %}"><strong>{{ object.inductor.name }}</strong></a></p>
+        <p>Machine: <a href="{% url 'machine details' pk=object.machine.pk %}"><strong>{{ object.machine.name }}</strong></a></p>
+        <p>Created on: <strong>{{ object.created_on }}</strong></p>
+        <div class="edit-btn">
+            <a href="{% url 'cable edit' pk=object.pk %}">Edit</a>
+            <a href="{% url 'cable delete' pk=object.pk %}">Delete</a>
+        </div>
+        <div class="order-btn">
+            <a href="#">Order</a>
+        </div>
+    </section>
+{% endblock %}

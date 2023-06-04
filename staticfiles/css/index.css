@@ -1,0 +1,98 @@
+
+.cable-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+}
+
+.cable-sections-headers {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cable-sections-headers h1 {
+    font-size: 30px;
+}
+
+.devices-create {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cable-sections-headers a {
+    text-decoration: none;
+    /*margin-left: 100px;*/
+    font-size: 18px;
+    padding: 6px 22px;
+    background-color: #d7d7d7;
+    border-radius: 24px;
+    color: black;
+    font-weight: 500;
+}
+
+.cable-sections-headers a:hover {
+    background-color: #b70000;
+    box-shadow: rgb(103, 31, 31) 0 10px 15px;
+    color: white;
+}
+
+.cable-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.cable-card {
+    padding: 20px;
+    border-radius: 14px;
+    background-color: #d7d7d7;
+}
+
+.cable-card:hover {
+    box-shadow: rgb(1, 25, 72) 0 8px 24px;
+}
+
+.paginator {
+    margin-top: 40px;
+}
+
+.page-link, .page-number {
+    text-decoration: none;
+    margin: 0 5px;
+    background-color: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.page-link:hover {
+    background-color: #ada7a7;
+    color: black;
+}
+
+.cable-card-last-p {
+    margin-bottom: 10px;
+}
+
+.cable-details {
+    text-decoration: none;
+    padding: 6px 14px;
+    background-color: #100f0f;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.cable-details:hover {
+    background-color: #1364fa;
+}

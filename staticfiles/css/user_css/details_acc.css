@@ -1,0 +1,46 @@
+.details-acc {
+    margin-top: 50px;
+    padding: 20px 30px 30px 30px;
+    /*border: 1px solid #2da8cd;*/
+    border-radius: 6px;
+    box-shadow: 11px 12px 22px 0 rgba(91, 90, 90, 0.8);
+    background-color: #e1e0e0;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.details-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    line-height: 20px;
+}
+
+.information-acc {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.edit-acc, .change-pass {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 8px 20px;
+}
+
+.edit-acc:hover, .change-pass:hover {
+    background-color: #2da8cd;
+}
+
